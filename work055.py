@@ -15,39 +15,39 @@ def create_square(n):
         index = 1
         square[a][b] = index
         print(square)
-        while index<n**2+1:
+        while index<n**2:
             if 0<a and b<n-1:
                 if square[a-1][b+1]==0:
                     a-=1
                     b+=1
                     index+=1
                     square[a][b]=index
-                    print(square)
+                    
                 else:
                     a+=1
                     index+=1
                     square[a][b]=index
-                    print(square)
+                    
             elif a==0 and b ==n-1:
                 a=1
                 b = n-1
                 index+=1
                 square[a][b]=index
-                print(square)
+                
             elif a==0 and b<n-1:
                 a = n-1
                 b+=1
                 index +=1
                 square[a][b]=index
-                print(square)
+                
             elif a<n+1 and b==n-1:
                 a-=1
                 b =0
                 index +=1
                 square[a][b]=index
-                print(square)
+                
 
                 
         return square
                 
-print(create_square(7))
+print(create_square(7)
